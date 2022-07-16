@@ -19,7 +19,7 @@ var title = L.control();
 
 title.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info');
-    div.innerHTML += '<h2>Parques naturales</h2>Colombia'; return div;
+    div.innerHTML += '<h2>Áreas protegidas</h2>Colombia'; return div;
 };
 title.addTo(map);
 
