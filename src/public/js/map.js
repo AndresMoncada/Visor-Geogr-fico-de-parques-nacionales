@@ -63,13 +63,12 @@ console.log(url);
 var paramos = new L.geoJson(null, {
     style: styleParams,
     onEachFeature: function (feature, layer) {
-        layer.bindPopup("Nombre: " + feature.properties.__gid);
+        layer.bindPopup("<img src='https://cdn.icon-icons.com/icons2/317/PNG/512/map-map-marker-icon_34394.png' alt=''></img>" + "Nombre: " + feature.properties.__gid);
     }
 });
 
 function loadGeojsonPara(data) {
     paramos.addData(data);
-    console.log('========');
     paramos.addTo(map);
 }
 
