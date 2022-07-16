@@ -5,5 +5,6 @@ const controller = require('../controller/index');
 router.get('/', controller.index);
 router.get('/users', controller.users)
 router.get('/map', controller.map);
+router.get('/explain', controller.map)
 
 module.exports = router;
