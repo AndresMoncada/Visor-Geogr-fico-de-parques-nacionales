@@ -12,7 +12,7 @@ controller.map = (req,res)=>{
 
 controller.users = async (req, res)=>{
     res.render('user');
-    const output = await conexion.query('Select gid, nombre from areaprotegida');
+    //const output = await conexion.query('Select gid, nombre from areaprotegida');
     //console.log(output.rows);
     conexion.end();
 }

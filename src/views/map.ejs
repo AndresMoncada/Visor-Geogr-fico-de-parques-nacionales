@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <title>Mapa</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
-	  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-    
-    <link rel="stylesheet" href="/css/map.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+  <!-- MiniMap -->
+	<link rel="stylesheet" href="/minimap/Control.MiniMap.min.css" />
+	<script type="text/javascript" src="/minimap/Control.MiniMap.min.js"></script>
+
+  <!-- Control de capas -->
+  <link rel="stylesheet" href="https://davicustodio.github.io/Leaflet.StyledLayerControl/css/styledLayerControl.css" />
+  <script src="https://davicustodio.github.io/Leaflet.StyledLayerControl/src/styledLayerControl.js"></script>
+
+  <title>Mapa</title>
+
+  <link rel="stylesheet" href="/css/map.css">
+
 </head>
 <header>
-    <nav class="navbar js-navbar">
-        <ul class="menu">
-          <li>
-            <a class="hasDropdown" href="/">Inicio <i class="fa fa-angle-down"></i></a>
-          </li>
-          <li>
-            <a class="hasDropdown" href="/map">Mapas<i class="fa fa-angle-down"></i></a>
-          </li>
-          <li>
-            <a class="hasDropdown" href="/users">Usuario<i class="fa fa-angle-down"></i></a>
-          </li>
-        </ul>
-      </nav>
+  <nav class="navbar js-navbar">
+    <ul class="menu">
+      <li>
+        <a class="hasDropdown" href="/">Inicio <i class="fa fa-angle-down"></i></a>
+      </li>
+      <li>
+        <a class="hasDropdown" href="/map">Mapas<i class="fa fa-angle-down"></i></a>
+      </li>
+      <li>
+        <a class="hasDropdown" href="/users">Usuario<i class="fa fa-angle-down"></i></a>
+      </li>
+    </ul>
+  </nav>
 </header>
+
 <body>
-    <div id="mapa"></div>
-    <!-- Control de cambios git 3--> 
-    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
-    <script src="/js/map.js"></script>
+  <div id="mapa"></div>
+  <!-- Control de cambios git 3-->
+  <script src="/js/map.js"></script>
 </body>
+
 </html>
