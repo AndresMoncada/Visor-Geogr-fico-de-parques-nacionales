@@ -1,4 +1,3 @@
-const { Pool } = require("pg");
 const conexion = require('../public/psql');
 const controller = {}
 
@@ -14,6 +13,6 @@ controller.users = async (req, res)=>{
     res.render('user');
     //const output = await conexion.query('Select gid, nombre from areaprotegida');
     //console.log(output.rows);
-    conexion.end();
+    //conexion.end();
 }
 module.exports=controller;
