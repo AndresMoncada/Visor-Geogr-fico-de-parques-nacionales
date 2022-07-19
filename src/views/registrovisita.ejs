@@ -39,15 +39,16 @@
 
     <h1 class="login-header">Registro de una visita</h1>
 
-    <form action="login" class="login-container" method="post">
-      <p>Nombre área: "Nombre"</p>
+    <form action="rvisita" class="login-container" method="POST">
+      <p>Nombre área:</p>
+      <p><input name="nombre" placeholder="" readonly></p>
       <p>Opinión:</p>
-      <p><input placeholder="Opinión"></p>
+      <p><input name="opinion" placeholder="Opinión"></p>
       <p>Calificación:</p>
-      <p><input type="number" min="1" max="5" placeholder="Calificación"></p>
+      <p><input name="calificacion" type="number" min="1" max="5" placeholder="Calificación"></p>
       <p><input type="submit" value="Registrar visita"></p>
     </form>
-    
+
   </div>
 </body>
 
