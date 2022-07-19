@@ -96,16 +96,21 @@ var areas = new L.geoJson(null, {
     style: styleareas,
     onEachFeature: function (feature, layer) {
         layer.bindPopup(`
-        <h2>`+ feature.properties.nombre +`</h2>
-        <img src="`+ feature.properties.imagen +`"/>
+        <form action="visita" class="login-container" method="POST">
+        <p><h2>`+ feature.properties.nombre +`</h2></p>
+        <p><img src="`+ feature.properties.imagen +`"/></p>
+        <p><input id="correo" name="correo" type="email" placeholder="Correo"></p>
+        <p><input id="contraseña" name="contraseña" type="password" placeholder="Contraseña"></p>
+        <p><input type="submit" value="Registrar"></p>
+      </form>
+        
         <hr>
         <h3>Categoría: <h4>`+ feature.properties.categoria +`</h4></h3>
         <h3>Coordenadas: </h3><h4>`+ feature.properties.centroid_y +` `+ feature.properties.centroid_x +`</h4>
         <h3>Hectáreas: </h3><h4>`+ feature.properties.hectareas0 +`</h4>
         <hr>
         <h3>Para más información visita: </h3><h4><a href="`+ feature.properties.url +`">`+feature.properties.nombre+` RUNAP</a></h4>
-        <hr>
-        <a href="/visita">Registrar visita</a>`);
+        <hr>`);
     }
 });
 

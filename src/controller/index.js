@@ -22,7 +22,6 @@ controller.users = async (req, res)=>{
 }
 
 controller.visita = async(req,res) =>{
-    console.log(req.params.nombre);
     res.render('registrovisita')
 }
 
