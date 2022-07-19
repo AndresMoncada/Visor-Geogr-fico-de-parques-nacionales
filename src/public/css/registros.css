@@ -68,6 +68,30 @@ body {
     border-radius: 20px;
 }
 #tabla {
-	background-color: mediumorchid;
+	background-color: #fff;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
 	position: fixed;
+}
+table{
+    background-color: #fff;
+    width: 100%;
+    border-radius: 15px;
+}
+
+table td{
+    padding: 5px;
+}
+
+table thead {
+    background-color: #25283d;
+    color: #fff;
+    height: 40px;
+    border-radius: 10px;
+}
+
+table tbody tr:nth-child(even){
+    background-color: #d9dceb;
 }
