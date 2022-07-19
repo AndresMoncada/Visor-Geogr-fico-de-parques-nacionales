@@ -40,8 +40,8 @@
     <h1 class="login-header">Registro de una visita</h1>
 
     <form action="rvisita" class="login-container" method="POST">
-      <p>Nombre área:</p>
-      <p><input name="nombre" placeholder="" readonly></p>
+      <p id="nombre"></p>
+      <p><input id="objectid" name="objectid" placeholder=""  readonly></p>
       <p>Opinión:</p>
       <p><input name="opinion" placeholder="Opinión"></p>
       <p>Calificación:</p>
@@ -50,6 +50,12 @@
     </form>
 
   </div>
-</body>
+  <script>
+    var valores = window.location.search;
+    const urlParams = new URLSearchParams(valores);
+    document.getElementById('nombre').innerHTML = urlParams.get("nombre");
+    document.getElementById('objectid').value = urlParams.get("objectid");
 
+  </script>
+</body>
 </html>

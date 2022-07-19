@@ -1,6 +1,8 @@
 const express = require('express');
 const engine = require('ejs-mate');
 const path = require('path');
+const session  = require('express-session');
+const { sesion } = require('./controller');
 
 // init 
 const app = express();
@@ -13,6 +15,12 @@ app.set('views', path.join(__dirname, 'views'));
 //req.body 
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
+app.use(session({
+    secret:'secretkey',
+    resave: false,
+    saveUninitialized: false,
+}))
+
 //rutas
 app.use(require('./routes/'));
 

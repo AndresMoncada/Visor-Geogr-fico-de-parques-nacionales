@@ -10,14 +10,14 @@ var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
-googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
     maxZoom: 20,
-    subdomains:['mt0','mt1','mt2','mt3']
+    subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
-googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',{
+googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
     maxZoom: 20,
-    subdomains:['mt0','mt1','mt2','mt3']
+    subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
 });
 
 
@@ -92,27 +92,24 @@ var defaultParametersPara = {
 var parametersPara = L.Util.extend(defaultParametersPara);
 var url = owsrootUrl + L.Util.getParamString(parametersPara);
 
+
 var areas = new L.geoJson(null, {
     style: styleareas,
     onEachFeature: function (feature, layer) {
         layer.bindPopup(`
-        <form action="visita" class="login-container" method="POST">
-        <p><h2>`+ feature.properties.nombre +`</h2></p>
-        <p><img src="`+ feature.properties.imagen +`"/></p>
-        <p><input id="correo" name="correo" type="email" placeholder="Correo"></p>
-        <p><input id="contraseña" name="contraseña" type="password" placeholder="Contraseña"></p>
-        <p><input type="submit" value="Registrar"></p>
-      </form>
-        
+      <h2>`+ feature.properties.nombre + `</h2>
+      <img src="`+ feature.properties.imagen + `"/>
         <hr>
-        <h3>Categoría: <h4>`+ feature.properties.categoria +`</h4></h3>
-        <h3>Coordenadas: </h3><h4>`+ feature.properties.centroid_y +` `+ feature.properties.centroid_x +`</h4>
-        <h3>Hectáreas: </h3><h4>`+ feature.properties.hectareas0 +`</h4>
+        <h3>Categoría: <h4>`+ feature.properties.categoria + `</h4></h3>
+        <h3>Coordenadas: </h3><h4>`+ feature.properties.centroid_y + ` ` + feature.properties.centroid_x + `</h4>
+        <h3>Hectáreas: </h3><h4>`+ feature.properties.hectareas0 + `</h4>
         <hr>
-        <h3>Para más información visita: </h3><h4><a href="`+ feature.properties.url +`">`+feature.properties.nombre+` RUNAP</a></h4>
-        <hr>`);
-    }
+        <h3>Para más información visita: </h3><h4><a href="`+ feature.properties.url + `">` + feature.properties.nombre + ` RUNAP</a></h4>
+        <hr>
+        <a id="nombreform" href="/formvisita/?nombre=${feature.properties.nombre}&objectid=${feature.properties.objectid}">Registro visita</a>`);
+    },
 });
+
 
 function loadGeojsonPara(data) {
     areas.addData(data);
@@ -146,7 +143,7 @@ var baseMaps = [
             "<img src='https://cdn-icons.flaticon.com/png/512/1969/premium/1969118.png?token=exp=1658027820~hmac=f462db24254e7817422217fb75b4804e' height=15px, width=15px /> Satellite": googleSat,
             "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Openstreetmap_logo.svg/1200px-Openstreetmap_logo.svg.png' height=15px, width=15px /> OpenStreetMaps": osm,
             "<img src='https://cdn-icons-png.flaticon.com/512/854/854929.png' height=15px, width=15px /> Streets": googleStreets,
-            "<img src='https://cdn-icons-png.flaticon.com/512/5987/5987080.png' height=15px, width=15px /> Terrain":googleTerrain
+            "<img src='https://cdn-icons-png.flaticon.com/512/5987/5987080.png' height=15px, width=15px /> Terrain": googleTerrain
         }
     }
 ];
@@ -181,11 +178,11 @@ var googlesat2 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
 });
 
 var miniMap = new L.Control.MiniMap(googlesat2,
-{
-    toggleDisplay: true,
-    minimized: false,
-    position: "bottomleft"
-}).addTo(map);
+    {
+        toggleDisplay: true,
+        minimized: false,
+        position: "bottomleft"
+    }).addTo(map);
 
 
 //Control de Escala
@@ -193,7 +190,7 @@ L.control.scale({
     position: 'bottomleft',
     imperial: true
 })
-.addTo(map);    
+    .addTo(map);
 
 //Leyenda
 var legend = L.control({ position: 'bottomright' });

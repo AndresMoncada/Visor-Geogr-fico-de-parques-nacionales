@@ -32,7 +32,9 @@ controller.registrar = async (req,res)=>{
 }
 
 controller.rvisita = async (req,res)=>{
-    const {nombre, opinion, calificacion} = req.body;
-    console.log(nombre +" "+opinion + " "+ calificacion);
+    const {objectid, opinion, calificacion} = req.body;
+    const numgid = await pool.query('SELECT gid FROM areaprotegida WHERE objectid = $1',[objectid]);
+    console.log(numgid);
+    //console.log(req.body);
 }
 module.exports=controller;

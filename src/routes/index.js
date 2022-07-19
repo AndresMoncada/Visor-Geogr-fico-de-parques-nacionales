@@ -6,9 +6,10 @@ router.get('/', controller.index);
 router.get('/users', controller.users)
 router.get('/map', controller.map);
 router.get('/login', controller.sesion)
+router.get('/formvisita', controller.visita)
 router.get('/registro', controller.registro)
+
 router.post('/registrar', controller.registrar)
-router.get('/visita', controller.visita)
-router.post('/rvisita', controller.rvisita)
+router.post('/formvisita/rvisita', controller.rvisita)
 
 module.exports = router;
