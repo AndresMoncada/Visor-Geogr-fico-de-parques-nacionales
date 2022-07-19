@@ -61,11 +61,13 @@ title.onAdd = function (map) {
 
 //Estilos áreas protegidas
 function getColorareas(d) {
-    return d == 'Distritos Regionales de Manejo Integrado' ? '#2605cb' :
-        d == 'Belmira' ? '#0094ff' :
-            d == 'Los Picachos' ? '#00ff00' :
-                d == 'Santanderes' ? '#00571a' : '#76b5c5';
+    return d == 'Reserva Natural de la Sociedad Civil' ? '#D30CBE' :
+        d == 'Reservas Forestales Protectoras Regionales' ? '#D38E0C' :
+            d == 'Reservas Forestales Protectoras Nacionales' ? '#77EE33' :
+                d == 'Parque Nacional Natural' ? '#EEEB33'
+                 : '#A8F995';
 };
+
 function styleareas(feature) {
     return {
         fillColor: getColorareas(feature.properties.categoria),
