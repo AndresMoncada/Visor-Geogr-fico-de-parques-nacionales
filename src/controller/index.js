@@ -3,7 +3,7 @@ const conexion = require('../public/psql');
 const controller = {}
 
 controller.index = (req, res) => {
-    res.render('index');
+    res.render('map');
 }
 
 controller.map = (req, res) => {
@@ -18,14 +18,14 @@ controller.registro = (req, res) => {
     res.render('signup')
 }
 
-controller.registros = (req, res) => {
-    /*fetch('http://localhost:3000/registros')
-    .then((response) => response.json())
-    .then((registros) => {
-        console.log(registros)
-    })*/
-
-    res.render('registros');
+controller.registros = async (req, res) => {
+    await pool.query('SELECT idregistro,opinion, nombre, calificacion, usuario FROM registrovisita INNER JOIN areaprotegida ON areaprotegida.gid = registrovisita.idarea ORDER BY idregistro asc')
+        .then(projects => {
+            res.render('registros', { registros: projects.rows });
+        }).catch(err => {
+            console.log(err);
+            return res.status(500).send("Error obteniendo productos");
+        });
 }
 
 /*controller.mregistros= (req,res) => {

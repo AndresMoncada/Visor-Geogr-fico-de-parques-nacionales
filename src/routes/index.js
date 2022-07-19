@@ -5,11 +5,12 @@ const controller = require('../controller/index');
 router.get('/', controller.index);
 router.get('/registros', controller.registros)
 router.get('/map', controller.map);
-router.get('/login', controller.sesion)
+//router.get('/login', controller.sesion)
 router.get('/formvisita', controller.visita)
-router.get('/registro', controller.registro)
+//router.get('/registro', controller.registro)
 
-router.post('/registrar', controller.registrar)
+
+//router.post('/registrar', controller.registrar)
 router.post('/formvisita/rvisita', controller.rvisita)
 
 module.exports = router;

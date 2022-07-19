@@ -16,9 +16,6 @@
   <nav class="navbar js-navbar">
     <ul class="menu">
       <li>
-        <a class="hasDropdown" href="/">Inicio <i class="fa fa-angle-down"></i></a>
-      </li>
-      <li>
         <a class="hasDropdown" href="/map">Mapa<i class="fa fa-angle-down"></i></a>
       </li>
       <li>
@@ -30,14 +27,27 @@
 
 <body>
   <div id="tabla">
-    <h3 id="nombre" class="login-header">Registro de una visita</h3>
+    <h3 id="nombre" class="login-header">Registros de visita</h3>
     <table id="tablavisitas">
       <thead>
-        <th>Nombre usuario</th>
-        <th>Área visitada</th>
+        <tr>
+          <th>Número</th>
+          <th>Username</th>
+          <th>Área visitada</th>
+          <th>Opinión</th>
+          <th>Calificación</th>
+        </tr>
       </thead>
       <tbody>
-      
+        <% registros.forEach(project => { %>
+          <tr>
+            <td><%= project.idregistro %></td>
+              <td><%= project.usuario %></td>
+              <td><%= project.nombre %></td>
+              <td><%= project.opinion %></td>
+              <td><%= project.calificacion %></td>
+          </tr>
+          <% })%>
       </tbody>
     </table>
   </div>

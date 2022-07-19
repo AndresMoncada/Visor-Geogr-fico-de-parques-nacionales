@@ -87,7 +87,7 @@ var defaultParametersPara = {
     service: 'WFS',
     version: '1.0.0',
     request: 'GetFeature',
-    typeName: 'areasprotegidas',
+    typeName: 'areasproteg1',
     outputFormat: 'application/json'
 };
 
@@ -108,7 +108,7 @@ var areas = new L.geoJson(null, {
         <hr>
         <h3>Para más información visita: </h3><h4><a href="`+ feature.properties.url + `">` + feature.properties.nombre + ` RUNAP</a></h4>
         <hr>
-        <a id="nombreform" href="/formvisita/?nombre=${feature.properties.nombre}&objectid=${feature.properties.objectid}">Registro visita</a>`);
+        <a id="nombreform" href="/formvisita/?nombre=${feature.properties.nombre}&objectid=${feature.properties.objectid}">Registrar visita</a>`);
     },
 });
 
@@ -198,7 +198,7 @@ L.control.scale({
 var legend = L.control({ position: 'bottomright' });
 legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info');
-    div.innerHTML += '<img src= " http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=leyenda" alt="legend" width="100" height="130">';
+    div.innerHTML += '<img src= " http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=leyendaFinal" alt="legend" width="240" height="200">';
     return div;
 };
 legend.addTo(map);
