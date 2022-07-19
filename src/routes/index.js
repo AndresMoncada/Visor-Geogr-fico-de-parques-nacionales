@@ -3,7 +3,7 @@ const controller = require('../controller/index');
 
 //rutas
 router.get('/', controller.index);
-router.get('/users', controller.users)
+router.get('/registros', controller.registros)
 router.get('/map', controller.map);
 router.get('/login', controller.sesion)
 router.get('/formvisita', controller.visita)

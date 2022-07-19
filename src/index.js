@@ -2,6 +2,7 @@ const express = require('express');
 const engine = require('ejs-mate');
 const path = require('path');
 const session  = require('express-session');
+const flash = require('express-flash')
 const { sesion } = require('./controller');
 
 // init 
@@ -15,11 +16,15 @@ app.set('views', path.join(__dirname, 'views'));
 //req.body 
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
+
+//sessions
 app.use(session({
     secret:'secretkey',
     resave: false,
     saveUninitialized: false,
 }))
+
+app.use(flash())
 
 //rutas
 app.use(require('./routes/'));

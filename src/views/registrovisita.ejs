@@ -19,16 +19,10 @@
         <a class="hasDropdown" href="/">Inicio <i class="fa fa-angle-down"></i></a>
       </li>
       <li>
-        <a class="hasDropdown" href="/map">Mapas<i class="fa fa-angle-down"></i></a>
+        <a class="hasDropdown" href="/map">Mapa<i class="fa fa-angle-down"></i></a>
       </li>
       <li>
-        <a class="hasDropdown" href="/users">Usuario<i class="fa fa-angle-down"></i></a>
-      </li>
-      <li>
-        <div id="controlsesion">
-          <a href="/login">Log in</a>
-          <a href="/registro">Sign up</a>
-        </div>
+        <a class="hasDropdown" href="/registros">Registros<i class="fa fa-angle-down"></i></a>
       </li>
     </ul>
   </nav>
@@ -37,11 +31,13 @@
 <body>
   <div class="login">
 
-    <h1 class="login-header">Registro de una visita</h1>
+    <h1 id="nombre" class="login-header">Registro de una visita</h1>
 
     <form action="rvisita" class="login-container" method="POST">
-      <p id="nombre"></p>
+      <p>Id del área:</p>
       <p><input id="objectid" name="objectid" placeholder=""  readonly></p>
+      <p>Usuario:</p>
+      <p><input name="usuario" placeholder="Usuario"></p>
       <p>Opinión:</p>
       <p><input name="opinion" placeholder="Opinión"></p>
       <p>Calificación:</p>

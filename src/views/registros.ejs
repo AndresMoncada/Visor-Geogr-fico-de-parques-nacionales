@@ -5,30 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Mapa</title>
+  <title>Usuarios</title>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
-  <!-- MiniMap -->
-	<link rel="stylesheet" href="/Minimap/Control.MiniMap.min.css" />
-	<script type="text/javascript" src="/Minimap/Control.MiniMap.min.js"></script>
-
-  <!-- Control de capas -->
-	<link rel="stylesheet" href="/ControlLayer/css/styledLayerControl.css" />
-	<script type="text/javascript" src="/ControlLayer/src/styledLayerControl.js"></script>
-
-  <!-- Search -->
-	<link rel="stylesheet" href="/ControlSearch/leaflet-search.css" />
-	<script type="text/javascript" src="/ControlSearch/leaflet-search.js"></script>
-
-  <!-- Estilos del mapa -->
-  <link rel="stylesheet" href="/css/map.css">
-
-  
-
+  <link rel="stylesheet" href="/css/registros.css">
 </head>
 <header>
   <nav class="navbar js-navbar">
@@ -44,14 +26,19 @@
       </li>
     </ul>
   </nav>
-  <a> </a>
 </header>
 
 <body>
-  <div id="mapa"></div>
+    <div id="tabla">
+      <table id="tablavisitas">
+        <thead>
+          <th>Nombre usuario</th>
+          <th>Área visitada</th>
+        </thead>
+        <tbody>
 
-  <!-- Javascript utilizado-->
-  <script src="/js/map.js"></script>
+        </tbody>
+      </table>
+    </div>
 </body>
-
 </html>
