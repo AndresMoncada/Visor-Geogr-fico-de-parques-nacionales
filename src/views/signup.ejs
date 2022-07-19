@@ -5,30 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Mapa</title>
+  <title>Usuarios</title>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
-  <!-- MiniMap -->
-	<link rel="stylesheet" href="/Minimap/Control.MiniMap.min.css" />
-	<script type="text/javascript" src="/Minimap/Control.MiniMap.min.js"></script>
-
-  <!-- Control de capas -->
-	<link rel="stylesheet" href="/ControlLayer/css/styledLayerControl.css" />
-	<script type="text/javascript" src="/ControlLayer/src/styledLayerControl.js"></script>
-
-  <!-- Search -->
-	<link rel="stylesheet" href="/ControlSearch/leaflet-search.css" />
-	<script type="text/javascript" src="/ControlSearch/leaflet-search.js"></script>
-
-  <!-- Estilos del mapa -->
-  <link rel="stylesheet" href="/css/map.css">
-
-  
-
+  <link rel="stylesheet" href="/css/signup.css">
 </head>
 <header>
   <nav class="navbar js-navbar">
@@ -50,14 +32,21 @@
       </li>
     </ul>
   </nav>
-  <a> </a>
 </header>
 
 <body>
-  <div id="mapa"></div>
+  <div class="login">
 
-  <!-- Javascript utilizado-->
-  <script src="/js/map.js"></script>
+    <h2 class="login-header">Registro</h2>
+
+    <form action="registrar" class="login-container" method="POST">
+      <p><input id="nombre" name="nombre" placeholder="Nombre"></p>
+      <p><input id="apellido" name="apellido" placeholder="Apellido"></p>
+      <p><input id="correo" name="correo" type="email" placeholder="Correo"></p>
+      <p><input id="contraseña" name="contraseña" type="password" placeholder="Contraseña"></p>
+      <p><input type="submit" value="Registrar"></p>
+    </form>
+  </div>
 </body>
 
 </html>

@@ -10,6 +10,9 @@ app.engine('ejs', engine);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+//req.body 
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
 //rutas
 app.use(require('./routes/'));
 

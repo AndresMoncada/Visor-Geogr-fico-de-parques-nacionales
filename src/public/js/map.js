@@ -104,7 +104,8 @@ var areas = new L.geoJson(null, {
         <h3>Hectáreas: </h3><h4>`+ feature.properties.hectareas0 +`</h4>
         <hr>
         <h3>Para más información visita: </h3><h4><a href="`+ feature.properties.url +`">`+feature.properties.nombre+` RUNAP</a></h4>
-        `);
+        <hr>
+        <a href="/visita">Registrar visita</a>`);
     }
 });
 
